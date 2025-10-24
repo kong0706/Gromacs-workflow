@@ -10,5 +10,5 @@ bash run_all.sh
 
 3.MMGBSA
 script文件夹中的mmpbsa.in中包含了使用方法，记得先要激活gmxMMPBSA虚拟环境。
-conda activate /home/yjkong/miniconda3/envs/gmxMMPBSA
+
 
