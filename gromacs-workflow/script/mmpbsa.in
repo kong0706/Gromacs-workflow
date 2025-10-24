@@ -1,0 +1,21 @@
+Sample input file for PB/GB calculation
+#This input file is meant to show only that gmx_MMPBSA works. Although, we tried to use the input files as recommended in the 
+#Amber manual, some parameters have been changed to perform more expensive calculations in a reasonable amount of time. Feel free to change the parameters
+#according to what is better for your system.
+#useage: mpirun -np 32 gmx_MMPBSA -O -i ../script/mmpbsa.in -cs ../md_out.tpr -ct md_out_fit.xtc -ci ../index.ndx -cg 1 13 -cp ../input/topol.top -o FINAL_RESULTS_MMPBSA.dat -eo FINAL_RESULTS_MMPBSA.csv -do FINAL_DECOMP_MMPBSA.csv -nogui
+&general
+sys_name="PB",
+startframe=9010, interval=10, endframe=10000, verbose=2, PBRadii=3
+/
+&pb
+istrng=0.15, fillratio=4.0
+/
+&decomp
+idecomp=2, dec_verbose=3,
+print_res="within 7"
+/
+
+
+
+
+

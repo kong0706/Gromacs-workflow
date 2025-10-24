@@ -1,0 +1,8 @@
+source leaprc.gaff2
+set default PBRadii mbondi2
+loadamberparams ligand.frcmod
+LIG = loadmol2 ligand_bcc.mol2
+check LIG
+saveoff LIG ligand.lib
+saveamberparm LIG ligand.prmtop ligand.inpcrd
+quit
